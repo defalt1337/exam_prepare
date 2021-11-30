@@ -1,0 +1,87 @@
+body{
+    background-image: url("../media/black.png");
+}
+main{
+    display: grid;
+    grid-template-areas: 
+    "h h h"
+    "n n n"
+    "ar ar as"
+    "f f f";
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+    font-family: Arial, Verdana, sans-serif;
+    background-color: #d3d3d3;
+}
+main,header,nav,article,aside,footer{
+    box-sizing: border-box;
+}
+header{
+    grid-area: h;
+    background-image: url("../media/game.jpg");
+    background-size: cover;
+    height: 300px;
+}
+
+nav{
+    grid-area: n;
+    background-color: gray;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    list-style-type: none;
+}
+
+nav li a{
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: orange;
+}
+
+article{
+    grid-area: ar;
+    background-color: #d3d3d3;
+    padding: 5px;
+    line-break: auto;
+}
+article ul li{
+    list-style-type: square;
+}
+
+aside{
+    grid-area: as;
+    /*padding: 0.5px;*/
+    border: 0.5px solid black;
+}
+
+footer{
+    grid-area: f;
+    text-align: center;
+    background-color: orange;
+}
+
+aside img{
+    width: 300px;
+}
+
+@media screen and (max-width: 700px){
+    main{
+        grid-template-areas:
+        "h"
+        "n"
+        "ar"
+        "as"
+        "f" ;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px){
+     nav ul{
+         grid-template-columns: 1fr;
+     }
+}
