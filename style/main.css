@@ -80,8 +80,8 @@ aside img{
         width: 100%;
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 300px){
      nav ul{
-         grid-template-columns: 1fr;
+         grid-template-columns: 1fr 1fr;
      }
 }
